@@ -31,3 +31,36 @@
                 document.getElementById("result").innerHTML = "Tip are: " + (myOutput);
     }
     </script>
+    <h2>buttons</h2>
+
+    <form>
+        <input type="radio"  value="sum" id="sum" onclick="chooseOp()">
+        <label for="sum">Sum</label></br>
+    
+        <input type="radio"  value="difference" id="diff" onclick="chooseOp()">
+        <label for="diff">diff</label></br>
+    
+        <input type="radio"  value="product" id="mult" onclick="chooseOp()">
+        <label for="mult">mult</label></br>
+    </form>
+    
+    <p id="calculations"></p>
+    <script>
+        function chooseOp(){
+           console.log("Getting form values")
+           base = parseFloat(document.getElementById("base").value)
+           tip= parseFloat(document.getElementById("tip").value)
+           total = document.getElementById("calculations")
+              if(document.getElementById("sum").checked){
+                    total.innerHTML= "sum of "+ base +" and "+ tip +" is "+(base + tip)
+                }
+             else if(document.getElementById("diff").checked){
+                    total.innerHTML= "diff of "+ base +" and "+ tip +" is "+(base - tip)
+                }
+            else if(document.getElementById("mult").checked){
+                    total.innerHTML= "product of "+ base +" and "+ tip +" is "+(base * tip)
+            }
+        }
+    </script>
+</body>
+</html>    
